@@ -1,17 +1,18 @@
 
+import { RouterProvider } from 'react-router-dom'
 import './App.css'
-import Header from './components/shared/Header/Header'
+import router from './route/Route/route'
 
 
-function App() {
+function App(children) {
   
 
   return (
-  <div>
-    <Header></Header>
-    <h1>App here</h1>
-  </div>
-  )
+    <RouterProvider router={router}>{children}
+
+    </RouterProvider>
+ 
+  );
 }
 
 export default App

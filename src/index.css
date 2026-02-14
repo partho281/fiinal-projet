@@ -1,8 +1,23 @@
-/* .design {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 65%, 0% 100%); 
-} */
 
 :root{
     --color-primary:#34C9B6;
      --color-secondary:#C7F2FF;
+}
+.cardInfo{
+    transition: all 0.3s linear;
+}
+.cardCircle{
+    transition: all 0.3s linear;
+}
+
+
+.cardInfo:hover{
+    background-color: var(--color-secondary);
+    transition: all 0.3s linear;
+}
+.cardInfo:hover.cardCircle{
+    background-color: white;
+     transition: all 0.3s linear;
+
+
 }

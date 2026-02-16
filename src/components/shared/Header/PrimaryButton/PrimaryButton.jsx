@@ -2,8 +2,8 @@ import React from 'react';
 
 const PrimaryButton = ({children}) => {
     return (
-        <div className='bg-purple-500 p-5 m-2 w-auto'>
-            <button>{children}</button>
+        <div className='bg-primary  p-5 w-auto text-center text-white font-semibold'>
+            {children}
         </div>
     );
 };

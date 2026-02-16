@@ -40,10 +40,10 @@ const InfoCards = () => {
 
 
     return (
-        <div className='px-4 md:px-29 py-0 md:py-20 min-h-screen-20'>
+        <div className='px-4 md:px-29 py-10 md:pt-20 md:pb-20'>
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
                 {
-                    infoCardsData?.map((info,i)=><InfoCard
+                    infoCardsData?.map((info,i)=><InfoCard key={i}
                     info={info}></InfoCard>)
                 }
             </div>

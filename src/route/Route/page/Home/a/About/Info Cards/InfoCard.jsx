@@ -10,8 +10,8 @@ const InfoCard = ({info}) => {
       alt="best doctors" />
   </figure>
   <div className="card-body text-center mt-4">
-    <h2 className="text-lg font-semibold text-center ">Card Title</h2>
-    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <h2 className="text-lg font-semibold text-center ">{name}</h2>
+    <p>{des}</p>
     
   </div>
 </div>

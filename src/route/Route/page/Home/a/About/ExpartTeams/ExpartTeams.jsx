@@ -6,7 +6,7 @@ import doctor3 from '../../../../../../../assets/image/pic3.png';
 import doctor4 from '../../../../../../../assets/icon/pic4.png'; 
 import InfoCards from '../Info Cards/InfoCards';
 import InfoCard from '../Info Cards/InfoCard';
-
+import Expart from './Expart';
 
 const ExpartTeams = () => {
     const expertTeam =[
@@ -39,7 +39,12 @@ const ExpartTeams = () => {
                 <h1 className='text-5xl font-semibold '>Our Expert Team</h1>
                 <p className='text-neutral'>Country to popular belief, Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam exercitationem sint totam repudiandae quos accusamus odio sed, quam officia eaque explicabo ipsum inventore quibusdam praesentium possimus earum sequi doloremque ipsam!</p>
             </div>
-            
+             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-10'>
+                {
+                   expertTeam?.map((member,i)=>(<Expart key={i}
+                    member={member}></Expart>))
+                }
+            </div>
         </div>
     );
 };

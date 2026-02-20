@@ -16,9 +16,12 @@
     background-color: var(--color-secondary);
     transition: all 0.3s linear;
 }
-.cardInfo:hover.cardCircle{
+.cardInfo:hover .cardCircle{
     background-color: white;
      transition: all 0.3s linear;
 
 
+}
+.footer-shape{
+   clip-path: polygon(100% 1%, 100% 100%, 0% 100%, 0% 43%);
 }

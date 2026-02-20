@@ -1,9 +1,12 @@
 import React from 'react';
+import ExpartTeams from './ExpartTeams/ExpartTeams';
+import InfoCards from './Info Cards/InfoCards';
 
 const About = () => {
     return (
         <div>
-            <h1>About page</h1>
+            <InfoCards></InfoCards>
+          <ExpartTeams></ExpartTeams>
         </div>
     );
 };

@@ -1,22 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import {  Link } from 'react-router-dom';
 
 const SignUp = () => {
+
+ const {
+    register,
+    handleSubmit,
+    // watch,
+    // formState: { errors },
+  } = useForm()
+  const handleUserRegistration =(data)=>{
+ console.log(data);
+  }
+   
+    
+ 
+
     return (
         <div className=' mx-auto card shadow-2xl mt-10 w-96'>
         <div className='card-body '>
-            <form className='fieldset'>
+            <form onSubmit={handleSubmit(handleUserRegistration)} className='fieldset'>
                <div>
                  <label className='label'>Name</label>
-                <input className='input w-full' type="text" />
+                <input className='input w-full'{...register('name')}placeholder='type your name' type="text" />
                </div>
                <div className='mt-2'>
                  <label className='label'>Email</label>
-                <input className='input w-full' type="text" />
+                <input className='input w-full'{...register('email')} type="text" />
                </div>
                <div className='mt-2'>
                  <label className='label'>Password</label>
-                <input className='input w-full' type="text" />
+                <input className='input w-full'{...register('password')} type="text" />
                  <div className='mt-2'>
               <input type="Submit" className='input w-full bg-primary text-white' />
 

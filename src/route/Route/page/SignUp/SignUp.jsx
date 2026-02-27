@@ -7,8 +7,8 @@ const SignUp = () => {
  const {
     register,
     handleSubmit,
-    // watch,
-    // formState: { errors },
+    watch,
+    formState: { errors },
   } = useForm()
   const handleUserRegistration =(data)=>{
  console.log(data);
@@ -23,15 +23,29 @@ const SignUp = () => {
             <form onSubmit={handleSubmit(handleUserRegistration)} className='fieldset'>
                <div>
                  <label className='label'>Name</label>
-                <input className='input w-full'{...register('name')}placeholder='type your name' type="text" />
+                <input className='input w-full'{...register('name',{required:'Name is required'})}placeholder='type your name' type="text" />
+              {errors.name &&   <p className='text-red-500'>{errors.name.message}</p>}
                </div>
                <div className='mt-2'>
                  <label className='label'>Email</label>
-                <input className='input w-full'{...register('email')} type="text" />
+                <input className='input w-full'{...register('email',{required:'Email Adress is required'})}placeholder='type your email ' type="text" />
+                  {errors.email &&   <p className='text-red-500'>{errors.email.message}</p>}
                </div>
                <div className='mt-2'>
                  <label className='label'>Password</label>
-                <input className='input w-full'{...register('password')} type="text" />
+                <input className='input w-full'{...register('password',{required:'password  is required',minLength:{
+                  value:6,
+                  message:'password should six characters',
+                },pattern:{
+                  value:/(?=.*[A-Z])(?=.*[@$#^&+-=!])(?=.*[0-9])/,
+                  message:'Password should be one special characters,one capital and number'
+                },
+              },
+                    
+                )}placeholder='type your password'
+              
+                type="text" />
+                  {errors.password &&   <p className='text-red-500'>{errors.password.message}</p>}
                  <div className='mt-2'>
               <input type="Submit" className='input w-full bg-primary text-white' />
 

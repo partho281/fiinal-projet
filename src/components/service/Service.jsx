@@ -1,9 +1,13 @@
 import React from 'react';
+import ServiceBanner from '../../route/Route/page/SignUp/Signin/Services/ServiceBanner/ServiceBanner';
+import Servicesoption from '../../route/Route/page/SignUp/Signin/Services/Servicesoption/Servicesoption';
 
 const Service = () => {
     return (
         <div>
-            <h1>Service page</h1>
+           
+            <ServiceBanner></ServiceBanner>
+            <Servicesoption></Servicesoption>
         </div>
     );
 };
